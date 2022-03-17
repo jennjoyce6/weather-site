@@ -8,7 +8,7 @@ const forecast=(latitude,longitude,callback)=>{
         } else if(body.error){
             callback('Unable to find location. Try another search', undefined)
         } else {
-            callback(undefined, 'Todays temperature at '+body.location.name+ ' is '+body.current.temperature+'. The temperature feels like '+body.current.feelslike+'. The weather is '+body.current.weather_descriptions+'. There is a '+body.current.precip+'% chance of rain')
+            callback(undefined, 'Todays temperature at '+body.location.name+ ' is '+body.current.temperature+'degrees celsius. The temperature feels like '+body.current.feelslike+'. The weather is '+body.current.weather_descriptions+'. There is a '+body.current.precip+'% chance of rain')
         }
     })
 }
